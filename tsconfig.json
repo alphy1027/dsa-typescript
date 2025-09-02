@@ -1,0 +1,29 @@
+// Visit https://aka.ms/tsconfig to read more about this file
+{
+  "compilerOptions": {
+    /* File Layout */
+    "rootDir": "./src", // all your .ts files go in src/
+    "outDir": "./dist", // compiled JS goes here
+
+    /* Environment Settings */
+    "target": "es2020", // modern enough, works with async/await
+    "module": "commonjs", // standard for Node.js
+    "lib": ["es2020"], // include modern JS features
+    "types": ["node"], // enable Node.js globals like process, fs, etc.
+
+    /* Outputs */
+    "sourceMap": true, // useful if debugging
+    "declaration": false, // we don’t need .d.ts files for DSA practice
+
+    /* Type Checking */
+    "strict": true, // enable strict mode
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* Module Resolution */
+    "esModuleInterop": true, // allow commonjs/esm imports to play nice
+    "skipLibCheck": true
+  },
+  "include": ["src"], // only look at files in src/
+  "exclude": ["node_modules", "dist"]
+}
